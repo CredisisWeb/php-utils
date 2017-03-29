@@ -9,7 +9,30 @@
 namespace JFernando\PHPUtils\Reflection;
 
 
-class Method
+use Doctrine\Common\Annotations\AnnotationReader;
+
+class Method extends \ReflectionMethod
 {
+
+    /**
+     * @var AnnotationReader
+     */
+    protected $reader;
+
+    public function __construct($class, $name)
+    {
+        parent::__construct($class, $name);
+        $this->reader = new AnnotationReader();
+    }
+
+    public function getAnnotation($nome)
+    {
+        return $this->reader->getMethodAnnotation($this, $nome);
+    }
+
+    public function getAnnotations()
+    {
+        return $this->reader->getMethodAnnotations($this);
+    }
 
 }

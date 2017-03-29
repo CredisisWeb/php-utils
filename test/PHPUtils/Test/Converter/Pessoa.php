@@ -12,4 +12,8 @@ namespace PHPUtils\Test\Converter;
 class Pessoa
 {
 
+    public $nome = 'teste';
+    public $idade = 12;
+
+    //TODO Fazer os testes unitários
 }

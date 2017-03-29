@@ -8,8 +8,20 @@
 
 namespace JFernando\PHPUtils\Converter\Annotation;
 
+use Doctrine\Common\Annotations\Annotation;
+use Doctrine\Common\Annotations\Annotation\Target;
 
-class Parser
+/**
+ * Class Parser
+ * @package JFernando\PHPUtils\Converter\Annotation
+ * @Annotation
+ * @Target("PROPERTY")
+ */
+class Parser extends Annotation
 {
+
+    public $name      = false;
+    public $converter = false;
+    public $class     = false;
 
 }

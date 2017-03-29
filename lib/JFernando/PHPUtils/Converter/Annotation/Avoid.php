@@ -9,7 +9,16 @@
 namespace JFernando\PHPUtils\Converter\Annotation;
 
 
-class Avoid
+use Doctrine\Common\Annotations\Annotation;
+
+/**
+ * Class Avoid
+ * @package JFernando\PHPUtils\Converter\Annotation
+ *
+ * @Annotation
+ * @Annotation\Target("PROPERTY")
+ */
+class Avoid extends Annotation
 {
 
 }

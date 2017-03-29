@@ -9,7 +9,21 @@
 namespace PHPUtils\Test\Converter;
 
 
-class Object2Array
+use JFernando\PHPUtils\Converter\Object2Array;
+use PHPUnit\Framework\TestCase;
+
+class Object2ArrayTest extends TestCase
 {
+
+    public function testeOtoArray(){
+        $ob = new Pessoa();
+
+        $objectArr = new Object2Array();
+        $array = $objectArr->toArray($ob);
+        $newOb = $objectArr->toObject(Pessoa::class, $array);
+
+        $this->assertEquals($ob, $newOb);
+
+    }
 
 }

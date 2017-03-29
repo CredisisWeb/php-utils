@@ -9,7 +9,6 @@
 namespace JFernando\PHPUtils\Converter\Exception;
 
 
-class InvalidArrayMapException
+class InvalidArrayMapException extends \Exception
 {
-
 }

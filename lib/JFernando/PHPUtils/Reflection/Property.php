@@ -6,7 +6,7 @@
  * Time: 09:51
  */
 
-namespace Credisis\PhpCnab\Utils;
+namespace JFernando\PHPUtils\Reflection;
 
 use Doctrine\Common\Annotations\AnnotationReader;
 use Doctrine\Common\Inflector\Inflector;

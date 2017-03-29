@@ -9,7 +9,6 @@
 namespace JFernando\PHPUtils\Converter\Exception;
 
 
-class InvalidClassException
+class InvalidClassException extends \Exception
 {
-
 }

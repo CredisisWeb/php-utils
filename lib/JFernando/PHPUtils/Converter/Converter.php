@@ -9,7 +9,8 @@
 namespace JFernando\PHPUtils\Converter;
 
 
-class Converter
+interface Converter
 {
-
+    public function toArray($content, $params = []);
+    public function toObject($content, $params = []);
 }
