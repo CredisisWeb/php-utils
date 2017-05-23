@@ -16,7 +16,7 @@ use Doctrine\Common\Annotations\Annotation\Target;
  *
  * @package JFernando\PHPUtils\Converter\Annotation
  * @Annotation
- * @Target("PROPERTY")
+ * @Target({"PROPERTY", "METHOD"})
  */
 class Parser extends Annotation
 {

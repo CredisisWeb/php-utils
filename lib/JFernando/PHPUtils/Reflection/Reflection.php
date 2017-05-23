@@ -104,4 +104,23 @@ class Reflection extends \ReflectionClass
     {
         return new Property($this->getName(), $name, $this->byGet);
     }
+
+    public function getMethod( $name )
+    {
+        return new Method($this->getName(), $name);
+    }
+
+    /**
+     * @param null $filter
+     * @return Method[]
+     */
+    public function getMethods( $filter = null )
+    {
+        $return = [];
+        foreach (parent::getMethods() as $method) {
+            $return[] = $this->getMethod($method->getName());
+        }
+
+        return $return;
+    }
 }

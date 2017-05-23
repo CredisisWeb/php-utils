@@ -20,6 +20,7 @@ class Object2ArrayTest extends TestCase
 
         $objectArr = new Object2Array();
         $array = $objectArr->toArray($ob);
+        var_dump($array);
         $newOb = $objectArr->toObject(Pessoa::class, $array);
 
         $this->assertEquals($ob, $newOb);
